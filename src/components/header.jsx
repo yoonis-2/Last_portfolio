@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom"
+
 function Header(){
     return <div>
         <div className="flex justify-between px-10 py-2">
             <h1 className="font-bold text-2xl">Yoonka-folio</h1>
             <div className="flex">
                 <ul className="flex gap-14 mt-1 text-[18px]">
-                    <li>Home</li>
+                    <Link to="/"><li>Home</li></Link>
                     <li>Page</li>
-                    <li>Portfolio</li>
+                    <Link to="prtfolio"><li>Portfolio</li></Link>
                     <li>Blog</li>
                     <li>Contacts</li>
                 </ul>
