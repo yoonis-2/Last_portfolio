@@ -4,6 +4,7 @@ import Service from "./service"
 import image4 from "../images/photo_5819181362228349138_w.jpg"
 import image5 from "../images/photo_5819181362228349139_w.jpg"
 import image6 from "../images/photo_5819181362228349140_w.jpg"
+import { Link } from "react-router-dom"
 
 
 function Home(){
@@ -57,7 +58,7 @@ function Home(){
            <Portfolio image={image5} website="Organization-Website" live="Live Demo" link="https://yoonis-2.github.io/organization/" code="View Code" view="https://github.com/yoonis-2/organization/blob/master/index.html" />
             <Portfolio image={image6} website="Portfolio-Website" live="Live Demo" link="https://portfolio-react-opal-three.vercel.app/" code="View Code" view="https://github.com/yoonis-2/portfolio-react222/blob/main/index.html"/>
         </div>
-        <button className="border-2 border-white px-7 py-2 rounded-lg mt-10 ml-[40%]">View More <i class="fa-solid fa-arrow-right"></i></button>
+        <Link to="/view"><button className="border-2 border-white px-7 py-2 rounded-lg mt-10 ml-[40%]">View More <i class="fa-solid fa-arrow-right"></i></button></Link>
     </div>
    </div>
     </div>

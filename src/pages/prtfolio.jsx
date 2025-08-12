@@ -32,7 +32,7 @@ function Prtfolio(){
        {
            FilterXog.length >0 ?  FilterXog.map((item) => {
                return (
-                   <Events image={item.image} title={item.website} price={item.price} />
+                   <Events product={item}/>
                 )
             })
             :
