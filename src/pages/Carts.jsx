@@ -1,7 +1,12 @@
-import { useDispatch, useSelector } from "react-redux"
+import {  useDispatch, useSelector } from "react-redux"
+import { Removefromcart } from "../redux/reducer/Cart"
 
 function Carts() {
     const cartItems = useSelector((state) => state.NewsCart.item)
+    const dispatch = useDispatch()
+    const handleRemove = () => {
+      dispatch(Removefromcart(product))
+    }
   return (
     <div>
         {
@@ -11,7 +16,7 @@ function Carts() {
                      <h3 className="font-bold mt-5">{data.title}</h3>
                     <h3 className="font-bold mt-5">{data.price}</h3>
                     <div>
-                    <button  className="bg-red-500 px-7 text-white py-1 rounded-md mt-5">Remove</button>
+                    <button onClick={handleRemove}  className="bg-red-500 px-7 text-white py-1 rounded-md mt-5">Remove</button>
                     </div>
                 </div>
             })
