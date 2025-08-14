@@ -10,7 +10,7 @@ function Events({product}){
         <div className="w-96 h-96 pl-10 ">
             <img className="56 h-56" src={product.image} alt="" />
             <div className="flex justify-between px-7 py-3">
-                <h1>{product.title}</h1>
+                <h1>{product.website}</h1>
                 <h1>${product.price}</h1>
             </div>
             <div>
