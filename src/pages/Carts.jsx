@@ -31,6 +31,7 @@ function Carts() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.NewsCart.item);
 
+  // Total price & total quantity
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -57,26 +58,13 @@ function Carts() {
 
       {cartItems.length > 0 ? (
         <>
-          {/* Totals */}
+          {/* Totals & Clear Cart */}
           <div className="flex justify-between items-center bg-gray-100 p-5 rounded-lg mb-6 shadow-md">
             <div className="flex items-center gap-3">
               <span className="font-semibold">Total Items:</span>
-              <input
-                type="number"
-                value={totalQuantity}
-                min="1"
-                onChange={(e) => {
-                  const multiplier = parseInt(e.target.value);
-                  cartItems.forEach((item) => {
-                    dispatch(UpdateCart({ id: item.id, quantity: item.quantity * multiplier }));
-                  });
-                }}
-                className="w-20 text-center border rounded-md px-2 py-1"
-              />
+              <span className="font-bold">{totalQuantity}</span>
             </div>
-            <div className="font-semibold text-lg">
-              Total Price: ${totalPrice}
-            </div>
+            <div className="font-semibold text-lg">Total Price: ${totalPrice}</div>
             <button
               onClick={handleClear}
               className="bg-red-600 hover:bg-red-700 text-white px-5 py-2 rounded-md font-bold transition"
@@ -101,7 +89,7 @@ function Carts() {
                   <h2 className="font-bold text-lg">{data.title}</h2>
                   <p className="text-gray-700 font-semibold">${data.price}</p>
 
-                  {/* Individual Quantity */}
+                  {/* Quantity input */}
                   <div className="flex items-center gap-3">
                     <span className="font-medium">Quantity:</span>
                     <input
