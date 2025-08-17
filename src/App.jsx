@@ -4,6 +4,7 @@ import Home from "./pages/home"
 import Prtfolio from "./pages/prtfolio"
 import Carts from "./pages/Carts"
 import Blog from "./pages/blog"
+import Contact from "../src/pages/contact"
 
 
 function App(){
@@ -15,6 +16,7 @@ function App(){
     <Route path="/view" element={<Prtfolio/>}/>
     <Route path="/blog" element={<Blog/>}/>
     <Route path="/cart" element={<Carts/>}/>
+    <Route path="/contact " element={<Contact/>}/>
    </Routes>
   </div>
 }
