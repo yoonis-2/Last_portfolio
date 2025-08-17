@@ -5,6 +5,7 @@ import Prtfolio from "./pages/prtfolio"
 import Carts from "./pages/Carts"
 import Blog from "./pages/blog"
 import Contact from "../src/pages/contact"
+import About from "../src/pages/About"
 
 
 function App(){
@@ -12,6 +13,7 @@ function App(){
    <Header/>
    <Routes>
     <Route path="/" element={<Home/>}/>
+    <Route path="/page" element={<About/>}/>
     <Route path="/prtfolio" element={<Prtfolio/>}/>
     <Route path="/view" element={<Prtfolio/>}/>
     <Route path="/blog" element={<Blog/>}/>

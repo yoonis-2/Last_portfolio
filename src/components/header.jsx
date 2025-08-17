@@ -9,7 +9,7 @@ function Header(){
             <div className="flex">
                 <ul className="flex gap-14 mt-1 text-[18px]">
                     <Link to="/"><li>Home</li></Link>
-                    <li>Page</li>
+                    <Link to="/page"><li>Page</li></Link>
                     <Link to="prtfolio"><li>Portfolio</li></Link>
                     <Link to="/blog"><li>Blog</li></Link>
                     <Link to="/contact"><li>Contacts</li></Link>
