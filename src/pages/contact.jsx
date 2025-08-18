@@ -1,8 +1,8 @@
-
 function Contact() {
-  return (
-    <div className="mt-20">contact</div>
-  )
+  return <div>
+    <h3>Welcome</h3>
+  </div>
+
 }
 
 export default Contact
