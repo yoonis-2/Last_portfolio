@@ -3,7 +3,9 @@
  const cartSlice = createSlice({
     name: "NewsCart",
     initialState:{
-        item:[]
+        item:[],
+        TotalPrice:0
+     
      },
      reducers:{
          AddtoCart: (state, action) => {
@@ -13,6 +15,11 @@
         RemoveItems: (state, action) => {
          const itemIndex = action.payload
          state.item = state.item.filter((_, index) => index !== itemIndex)
+        },
+        CalculatePrice: (state) => {
+        let price = 0 
+        state.item.forech
+   
         }
 
    }
