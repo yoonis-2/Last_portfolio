@@ -18,14 +18,17 @@
         },
         CalculatePrice: (state) => {
         let price = 0 
-        state.item.forech
+        state.item.forech((data) => {
+         price += data.price
+        })
+         state.TotalPrice = price 
    
         }
 
    }
  })
 
- export const {AddtoCart, Removefromcart} = cartSlice.actions
+ export const {AddtoCart, RemoveItems,CalculatePrice} = cartSlice.actions
  export default cartSlice.reducer
 
 
