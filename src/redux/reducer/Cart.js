@@ -10,6 +10,10 @@
              const newData = action.payload
            state.item.push(newData)
          },
+        RemoveItems: (state, action) => {
+         const itemIndex = action.payload
+         state.item = state.item.filter((_, index) => index !== itemIndex)
+        }
 
    }
  })
